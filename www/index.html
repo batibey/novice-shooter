@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Novice Shooter</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- KAYIT (ilk açılış) -->
+  <div id="screen-register" class="screen hidden">
+    <h1 class="title">NOVICE<br>SHOOTER</h1>
+    <p class="sub">KOD ADINI GİR, ASKER</p>
+    <input id="reg-name" maxlength="12" placeholder="OYUNCU" autocomplete="off">
+    <button id="btn-register" class="btn big">KAYIT OL</button>
+    <p class="tiny">ADMIN HESABI — TÜM SİLAHLAR AÇIK</p>
+  </div>
+
+  <!-- ANA MENÜ -->
+  <div id="screen-menu" class="screen hidden">
+    <h1 class="title">NOVICE<br>SHOOTER</h1>
+    <p id="menu-player" class="sub"></p>
+    <button class="btn big" data-go="levels">&#9654; OYNA</button>
+    <button class="btn" data-go="armory">CEPHANELİK</button>
+    <button class="btn" data-go="gear">TEÇHİZAT</button>
+    <button class="btn" data-go="character">KARAKTER</button>
+    <p class="tiny">v1.0 — retro sniper</p>
+  </div>
+
+  <!-- BÖLÜMLER -->
+  <div id="screen-levels" class="screen hidden">
+    <div class="bar">
+      <button class="btn back" data-go="menu">&#9664;</button>
+      <h2>BÖLÜMLER</h2>
+      <span id="levels-coins" class="coins"></span>
+    </div>
+    <div id="level-grid" class="grid"></div>
+  </div>
+
+  <!-- CEPHANELİK -->
+  <div id="screen-armory" class="screen hidden">
+    <div class="bar">
+      <button class="btn back" data-go="menu">&#9664;</button>
+      <h2>CEPHANELİK</h2>
+      <span id="armory-coins" class="coins"></span>
+    </div>
+    <div id="weapon-list" class="list"></div>
+  </div>
+
+  <!-- TEÇHİZAT -->
+  <div id="screen-gear" class="screen hidden">
+    <div class="bar">
+      <button class="btn back" data-go="menu">&#9664;</button>
+      <h2>TEÇHİZAT</h2>
+      <span id="gear-coins" class="coins"></span>
+    </div>
+    <div id="gear-list" class="list"></div>
+  </div>
+
+  <!-- KARAKTER -->
+  <div id="screen-character" class="screen hidden">
+    <div class="bar">
+      <button class="btn back" data-go="menu">&#9664;</button>
+      <h2>KARAKTER</h2>
+      <span id="char-coins" class="coins"></span>
+    </div>
+    <div id="char-body">
+      <canvas id="char-canvas" width="220" height="240"></canvas>
+      <div id="char-lists">
+        <p class="label">ŞAPKALAR</p>
+        <div id="hat-list" class="chips"></div>
+        <p class="label">KIYAFETLER</p>
+        <div id="jacket-list" class="chips"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OYUN -->
+  <div id="screen-game" class="screen hidden">
+    <div id="game-wrap">
+      <canvas id="game-canvas" width="640" height="360"></canvas>
+      <div id="hud">
+        <div id="hud-top">
+          <div id="hp-wrap"><i id="hp-fill"></i></div>
+          <span id="hud-info"></span>
+          <span id="hud-coins"></span>
+          <button class="hudbtn" id="btn-pause" data-go="menu">&#9776;</button>
+        </div>
+        <span id="hud-weapon"></span>
+        <button class="hudbtn round" id="btn-scope">&#8853;</button>
+        <button class="hudbtn round big" id="btn-fire">&#9673;</button>
+      </div>
+      <div id="overlay-result" class="hidden"></div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <div id="rotate-hint">TELEFONU YAN ÇEVİR &#8635;</div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/db.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

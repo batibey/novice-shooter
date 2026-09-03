@@ -1,0 +1,9 @@
+{
+  "appId": "com.mustafabati.noviceshooter",
+  "appName": "Novice Shooter",
+  "webDir": "www",
+  "backgroundColor": "#0a0a0a",
+  "ios": {
+    "contentInset": "never"
+  }
+}

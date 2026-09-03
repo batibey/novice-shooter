@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Novice Shooter</string>
+    <string name="title_activity_main">Novice Shooter</string>
+    <string name="package_name">com.mustafabati.noviceshooter</string>
+    <string name="custom_url_scheme">com.mustafabati.noviceshooter</string>
+</resources>

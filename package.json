@@ -1,0 +1,20 @@
+{
+  "name": "novice-shooter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Retro sniper oyunu — Limbo tarzı siluet haritalar, çöp adam hedefler. iOS + Android (Capacitor).",
+  "scripts": {
+    "start": "python3 -m http.server 8137 -d www",
+    "sync": "cap sync",
+    "ios": "cap open ios",
+    "android": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/ios": "^6.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0"
+  }
+}
